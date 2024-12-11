@@ -28,3 +28,16 @@ the function and run automatically when you commit through a GitHub action.
 
 What is the worst-case time complexity ($\Theta$) of the algorithm? Add your
 answer, including your reasoning, to this markdown file.
+
+The runtime complexity for the implemented code is $\Theta(|V^3|)$. This is because the initialization of the distance matrix with diagnal being 0 takes $\Theta(|V|)$ time complexity, next the code sets the ditance matrix between every pair of vertices to be infinity uses a nested loop resulting $\Theta(|V^2|)$ time complexity. Finally iterating over all pairs of vertices takes $\Theta(|V^3|)$ time complexity because of the triple nested loop. Together the time complexity becomes $\Theta(|V^2| + |V^3| + |V|)$. This simplifies to be $\Theta(|V^3|)$ time complexity 
+
+
+Reference:
+
+https://www.geeksforgeeks.org/floyd-warshall-algorithm-dp-16/
+
+The above website gave me good unstanding of the implementation of the algorithm. However I used my dijkstra's algorithm I implemented to get started and changed it according to the pseudo code give to complete floyd warshall's algorithm.
+
+ChatGPT helped write the test file
+
+I certify that I have listed all sources used to complete this exercise, including the use of any Large Language Models. All of the work is my own, except where stated otherwise. I am aware that plagiarism carries severe penalties and that if plagiarism is suspected, charges may be filed against me without prior notice
