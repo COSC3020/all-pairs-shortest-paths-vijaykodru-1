@@ -1,4 +1,4 @@
-function floydWarshall(graph) {
+function allPairsShortestPaths(graph) {
     const V = graph.length;
     // Initialize the distance matrix with infinity
     let dist = Array.from({ length: V }, () => Array(V).fill(Infinity));
@@ -30,3 +30,5 @@ function floydWarshall(graph) {
 
     return dist;
 }
+
+module.exports = { allPairsShortestPaths };
